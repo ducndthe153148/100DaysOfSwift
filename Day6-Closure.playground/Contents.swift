@@ -82,3 +82,31 @@ func travel3(action: (String) -> Void) {
 travel3 { (place: String) in
     print("I'm going to place \(place)")
 }
+
+func getDirections(to destination: String, then travel: ([String]) -> Void) {
+    let directions = [
+        "Go straight ahead",
+        "Turn left onto Station Road",
+        "Turn right onto High Street",
+        "You have arrived at \(destination)"
+    ]
+    travel(directions)
+}
+getDirections(to: "London") { (directions: [String]) in
+    print("I'm getting my car.")
+    for direction in directions {
+        print(direction)
+    }
+}
+
+
+func travelTest(action: (String) -> String) {
+    print("I'm getting ready to go.")
+    print(action("London"))
+    print("I arrived!")
+}
+
+travelTest { place in
+    print("This is: \(place)")
+    return "HIHI place: \(place)"
+}
