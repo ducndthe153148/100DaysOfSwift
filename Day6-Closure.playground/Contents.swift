@@ -110,3 +110,64 @@ travelTest { place in
     print("This is: \(place)")
     return "HIHI place: \(place)"
 }
+
+// MARK: - Return closure
+func travelReturn() -> (String) -> Void {
+    // return a closure
+    return {
+        // a void closure
+        print("i'm going to \($0)")
+    }
+}
+let result2 = travelReturn()("London")
+
+// More example
+func makeRandomGenerator () -> () -> (Int) {
+    let function = {
+        return Int.random(in: 1...10)
+    }
+    return function
+}
+
+let generator = makeRandomGenerator()
+let random1 = generator()
+print(random1)
+
+// Example 2
+func createTravelMethod(distance: Int) -> (String) -> (Void) {
+    if distance < 5 {
+        return { value in
+            print("Duong den \(value) ngan qua di")
+        }
+    } else if distance < 20 {
+        return {
+            value in
+            print("Duong den \(value) xa qua di")
+        }
+    } else {
+        return {
+            print("Duong den \($0) het roi")
+        }
+    }
+}
+
+let duongDi = createTravelMethod(distance: 10)
+duongDi("Trai tim crush")
+
+
+// MARK: - Travel track
+
+func travelTrack() -> (String) -> Void {
+    // Vì counter nằm trong function chứ không nằm trong closure nên counter sẽ được tăng lên
+    var counter = 1
+
+    return {
+        print("\(counter). I'm going to \($0)")
+        counter += 1
+    }
+}
+let result = travelTrack()
+result("London")
+result("VietNam")
+result("Americe")
+
