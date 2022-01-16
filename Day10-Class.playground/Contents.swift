@@ -135,3 +135,6 @@ class SingerHandsome {
 
 let trungDuc = SingerHandsome(age: 11)
 print(trungDuc)
+
+// Summary
+

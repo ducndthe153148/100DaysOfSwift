@@ -171,3 +171,21 @@ result("London")
 result("VietNam")
 result("Americe")
 
+// MARK: - SHORTHAND PARAMETER NAMES
+
+func travelShort (action: (String) -> String) {
+    print("I'm getting short hand")
+    let description = action("Viet Nam")
+    print(description)
+    print ("I arrived")
+}
+
+// Short hand
+travelShort { place in
+    return "This is place: \(place)"
+}
+
+// $0 chính là shorthand tượng trưng cho place 
+travelShort {
+    "I'm going to \($0) in my car"
+}
