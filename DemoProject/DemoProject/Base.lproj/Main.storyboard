@@ -37,7 +37,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1x-Ap-aLX">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1x-Ap-aLX" customClass="HeaderTable" customModule="DemoProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="222.5" width="414" height="224"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
