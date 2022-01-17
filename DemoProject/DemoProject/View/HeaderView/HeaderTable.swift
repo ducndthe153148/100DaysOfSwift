@@ -9,6 +9,8 @@ import UIKit
 
 class HeaderTable: UIView {
     
+    @IBOutlet var contentView: UIView!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpView()
@@ -20,16 +22,10 @@ class HeaderTable: UIView {
     }
 
     private func setUpView(){
-//        let xibView = Bundle.main.loadNibNamed("HeaderTable", owner: self, options: nil) as! UIView
-//        xibView.frame = self.bounds
-//        addSubview(xibView)
-//        self.addSubview(contentView)
-//        contentView.frame = self.bounds
-//        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-
-//        locationViewModel.sendLocation.subscribe(onNext: { [weak self] result in
-//            print("Dong 36: Result is:")
-//        })
+        Bundle.main.loadNibNamed("HeaderTable", owner: self, options: nil)
+        addSubview(contentView)
+        contentView.frame = self.bounds
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
     
 }

@@ -28,6 +28,12 @@ class ViewController: UIViewController {
         collectionView.register(CollectionViewCell.nib(), forCellWithReuseIdentifier: CollectionViewCell.identifier)
     }
 
+//    private func loadHeaderTable () {
+//        let cView = HeaderTable()
+//        self.headerView.addSubview(cView)
+//        cView.frame = self.headerView.bounds
+//    }
+
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
