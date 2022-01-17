@@ -70,4 +70,39 @@ func greet(_ name: String?){
     print("Hello \(name)")
 }
 
+// MARK: - Implicity unwrapped optionals
 
+let possibleString: String? = "An optional string."
+let forcedString: String = possibleString! // requires an exclamation mark
+
+let assumedString: String! = "An implicitly unwrapped optional string."
+let implicitString: String = assumedString // no need for an exclamation mark
+
+// MARK: - Nil coalescing
+/// Dùng dấu ??
+func userName (for id: Int) -> String? {
+    if id == 1 {
+        return "Taylor Swift"
+    } else {
+        return nil
+    }
+}
+
+let user = userName(for: 15) ?? "Anonymous"
+
+
+// MARK: - OPTIONAL CHAINING
+/// Nếu muốn truy cập a.b.c và b là optional, ta có thể viết là a.b?.c
+/// Nếu b nil thì sẽ return nil luôn
+///
+
+let names = ["Trung Duc": "Trung Kien", "Nam" : "Hao"]
+let beatle = names["Trung Duc"]?.first?.uppercased()
+
+let surnameLetter = names["rung Duc"]?.first?.uppercased() ?? "?"
+
+func countLettersInString(str: String) {
+    print("The string \(str) has \(str.count) letters.")
+}
+
+countLettersInString(str: "Hello")
