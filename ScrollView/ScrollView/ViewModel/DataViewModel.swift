@@ -12,6 +12,7 @@ class DataViewModel {
     
     var items = BehaviorSubject<[TableViewSection]>(value: [
         
+        // Bind thẳng data vào tableviewsection
         TableViewSection(items: [
         
             TableViewItem(title: "One"),
@@ -40,12 +41,14 @@ class DataViewModel {
     let targetsTest: PublishRelay<[TableViewSection]> = .init()
     var disposeBag = DisposeBag()
     var viewWillAppear: PublishRelay<Void> = .init()
+    var dataDummy: PublishRelay<[Dummy]> = .init()
     
     init(){
         self.viewWillAppear.subscribe({ [weak self] event in
             guard let self = self else { return }
             switch event {
             case .next:
+                print("Vao day")
                 self.ViewModel()
             default:
                 return
@@ -58,7 +61,7 @@ class DataViewModel {
         service.fetchData().subscribe(onNext: { [weak self] dummys in
             guard let self = self else { return }
             
-            //self.listDummy.accept(dummys.dummy)
+            self.dataDummy.accept(dummys.dummy)
 
         }).disposed(by: disposeBag)
     }
