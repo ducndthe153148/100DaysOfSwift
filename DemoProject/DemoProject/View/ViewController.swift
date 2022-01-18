@@ -6,12 +6,29 @@
 //
 
 import UIKit
+import RxDataSources
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var headerView: UIView!    
     @IBOutlet weak var tableView: UITableView!
+    
+    let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, String>>(
+        configureCell: { (dataSource, tableView, indexPath, item) in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
+            cell.titleLeft.text = "ABCXYZ"
+            return cell
+        },
+        titleForHeaderInSection: { dataSource, sectionIndex in
+            return dataSource[sectionIndex].model
+        },
+        titleForFooterInSection: { dataSource, sectionIndex in
+            return "xyz"
+        }
+    )
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,26 +41,26 @@ class ViewController: UIViewController {
         // Register tableview cell
         tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
         
+        // Auto resizing tableview cell
+        tableView.separatorStyle = .none
+        tableView.estimatedRowHeight = 170
+        tableView.rowHeight = UITableView.automaticDimension
+        
         // Register collectionview cell
         collectionView.register(CollectionViewCell.nib(), forCellWithReuseIdentifier: CollectionViewCell.identifier)
+        
+        self.navigationItem.title = "マイページ"
     }
-
-//    private func loadHeaderTable () {
-//        let cView = HeaderTable()
-//        self.headerView.addSubview(cView)
-//        cView.frame = self.headerView.bounds
-//    }
 
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath)
-        cell.textLabel?.text = "ABC"
         return cell
     }
 }
@@ -55,11 +72,15 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as! CollectionViewCell
-        cell.labelTest.text = "XYZ"
         print("trung duc ne")
-        
+//        cell.layer.cornerRadius = 24
         return cell
     }
-    
-     
+        
+}
+
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
 }

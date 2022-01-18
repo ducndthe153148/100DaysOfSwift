@@ -8,11 +8,15 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var labelTest: UILabel!
+    
+    @IBOutlet weak var superView: UIView!
+    @IBOutlet weak var buttonTouch: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        buttonTouch.layer.cornerRadius = 24
+        superView.layer.cornerRadius = 24
         print("an nhang nhang")
     }
     

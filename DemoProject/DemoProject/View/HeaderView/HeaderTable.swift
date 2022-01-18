@@ -10,6 +10,7 @@ import UIKit
 class HeaderTable: UIView {
     
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var button: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,6 +27,7 @@ class HeaderTable: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        button.layer.cornerRadius = 24
     }
     
 }

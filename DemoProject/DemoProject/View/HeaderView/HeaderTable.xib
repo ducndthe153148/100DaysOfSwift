@@ -10,22 +10,58 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderTable" customModule="DemoProject" customModuleProvider="target">
             <connections>
+                <outlet property="button" destination="eCh-pe-9RM" id="zse-Ve-jfX"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="5nB-S4-uwb"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="498" height="278"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="198"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="プランを購入" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROe-MB-VEU">
+                    <rect key="frame" x="24" y="24" width="366" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="まとめて乗車券を購入することで、一回払い乗車よりもお得に乗車することができます。" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3F-Le-agR">
+                    <rect key="frame" x="24" y="60" width="366" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCh-pe-9RM">
+                    <rect key="frame" x="24" y="122" width="366" height="48"/>
+                    <color key="backgroundColor" red="0.094117647058823528" green="0.75294117647058822" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="67D-hU-OMX"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="新規購入"/>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemIndigoColor"/>
+            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="eCh-pe-9RM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="0Vo-m9-qpF"/>
+                <constraint firstItem="K3F-Le-agR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="4Gg-9f-RZC"/>
+                <constraint firstItem="ROe-MB-VEU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="JeF-ZW-Y0t"/>
+                <constraint firstItem="eCh-pe-9RM" firstAttribute="top" secondItem="K3F-Le-agR" secondAttribute="bottom" constant="21" id="con-M2-U6Z"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ROe-MB-VEU" secondAttribute="trailing" constant="24" id="je8-Jw-3Qw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eCh-pe-9RM" secondAttribute="trailing" constant="24" id="knY-72-HSx"/>
+                <constraint firstAttribute="trailing" secondItem="K3F-Le-agR" secondAttribute="trailing" constant="24" id="sW3-jh-Zx6"/>
+                <constraint firstItem="ROe-MB-VEU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="ug0-RQ-mO0"/>
+                <constraint firstItem="K3F-Le-agR" firstAttribute="top" secondItem="ROe-MB-VEU" secondAttribute="bottom" constant="12" id="ybu-ni-MJm"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="192.75362318840581" y="-107.14285714285714"/>
+            <point key="canvasLocation" x="237.68115942028987" y="-27.455357142857142"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
