@@ -41,6 +41,9 @@ class ViewController: UIViewController {
         // Register tableview cell
         tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
         
+        // Register header of tableview cell
+        tableView.register(UINib(nibName: "CustomHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "CustomHeader")
+        
         // Auto resizing tableview cell
         tableView.separatorStyle = .none
         tableView.estimatedRowHeight = 170
@@ -62,6 +65,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeader") as! CustomHeader
+        headerView.contentView.backgroundColor = .systemGroupedBackground
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
 }
 

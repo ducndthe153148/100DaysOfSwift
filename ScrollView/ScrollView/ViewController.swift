@@ -57,6 +57,15 @@ class ViewController: UIViewController {
         viewWillAppear.accept(())
     }
     
+}
+
+extension ViewController {
+    private func bindTableView () {
+        dataViewModel.items
+            .bind(to: tableView.rx.items(dataSource: dataViewModel.dataSource))
+            .disposed(by: disposeBag)
+    }
+    
     private func bindViewModel() {
         let inputs = TestViewModel.Input(viewWillAppear: viewWillAppear.asObservable())
         let outputs = testViewModel.transform(input: inputs)
@@ -69,15 +78,6 @@ class ViewController: UIViewController {
                 cell.dateStart.text = "\(model.startDay)"
                 cell.dateFinish.text = "\(model.endDay)"
             }.disposed(by: disposeBag)
-    }
-    
-}
-
-extension ViewController {
-    private func bindTableView () {
-        dataViewModel.items
-            .bind(to: tableView.rx.items(dataSource: dataViewModel.dataSource))
-            .disposed(by: disposeBag)
     }
 }
 
