@@ -16,19 +16,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!    
     @IBOutlet weak var tableView: UITableView!
     
-    let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, String>>(
-        configureCell: { (dataSource, tableView, indexPath, item) in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
-            cell.titleLeft.text = "ABCXYZ"
-            return cell
-        },
-        titleForHeaderInSection: { dataSource, sectionIndex in
-            return dataSource[sectionIndex].model
-        },
-        titleForFooterInSection: { dataSource, sectionIndex in
-            return "xyz"
-        }
-    )
+//    let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, String>>(
+//        configureCell: { (dataSource, tableView, indexPath, item) in
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
+//            cell.titleLeft.text = "ABCXYZ"
+//            return cell
+//        },
+//        titleForHeaderInSection: { dataSource, sectionIndex in
+//            return dataSource[sectionIndex].model
+//        },
+//        titleForFooterInSection: { dataSource, sectionIndex in
+//            return "xyz"
+//        }
+//    )
     
     override func viewDidLoad() {
         super.viewDidLoad()

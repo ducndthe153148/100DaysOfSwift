@@ -10,6 +10,8 @@
 		476D334035D4CB185BAFCAFC /* Pods_DemoProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307C4C1261DE55011A1753BF /* Pods_DemoProject.framework */; };
 		F495CB422797CAEE0028E137 /* CustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495CB412797CAEE0028E137 /* CustomHeader.swift */; };
 		F495CB442797CB1D0028E137 /* CustomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F495CB432797CB1D0028E137 /* CustomHeader.xib */; };
+		F495CB462797EDB00028E137 /* DummyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495CB452797EDB00028E137 /* DummyModel.swift */; };
+		F495CB492797F1AD0028E137 /* DummyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495CB482797F1AD0028E137 /* DummyDataSource.swift */; };
 		F4D33F122795677800788FF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D33F112795677800788FF8 /* AppDelegate.swift */; };
 		F4D33F142795677800788FF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D33F132795677800788FF8 /* SceneDelegate.swift */; };
 		F4D33F162795677800788FF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D33F152795677800788FF8 /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 		748EA4CEF2642716A59AF3E5 /* Pods-DemoProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoProject.release.xcconfig"; path = "Target Support Files/Pods-DemoProject/Pods-DemoProject.release.xcconfig"; sourceTree = "<group>"; };
 		F495CB412797CAEE0028E137 /* CustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeader.swift; sourceTree = "<group>"; };
 		F495CB432797CB1D0028E137 /* CustomHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeader.xib; sourceTree = "<group>"; };
+		F495CB452797EDB00028E137 /* DummyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyModel.swift; sourceTree = "<group>"; };
+		F495CB482797F1AD0028E137 /* DummyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyDataSource.swift; sourceTree = "<group>"; };
 		F4D33F0E2795677800788FF8 /* DemoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D33F112795677800788FF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4D33F132795677800788FF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,14 @@
 			path = CustomHeader;
 			sourceTree = "<group>";
 		};
+		F495CB472797F19D0028E137 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				F495CB482797F1AD0028E137 /* DummyDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		F4D33F052795677800788FF8 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +111,7 @@
 		F4D33F102795677800788FF8 /* DemoProject */ = {
 			isa = PBXGroup;
 			children = (
+				F495CB472797F19D0028E137 /* DataSource */,
 				F4FAD18E27967850000A81E1 /* Extension */,
 				F4D33F28279567A200788FF8 /* Model */,
 				F4D33F272795679C00788FF8 /* View */,
@@ -143,6 +156,7 @@
 		F4D33F28279567A200788FF8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F495CB452797EDB00028E137 /* DummyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,8 +329,10 @@
 				F4D33F162795677800788FF8 /* ViewController.swift in Sources */,
 				F4D33F122795677800788FF8 /* AppDelegate.swift in Sources */,
 				F4D33F3927956E5500788FF8 /* HeaderTable.swift in Sources */,
+				F495CB462797EDB00028E137 /* DummyModel.swift in Sources */,
 				F4D33F2F27956D7800788FF8 /* CollectionViewCell.swift in Sources */,
 				F4D33F142795677800788FF8 /* SceneDelegate.swift in Sources */,
+				F495CB492797F1AD0028E137 /* DummyDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
