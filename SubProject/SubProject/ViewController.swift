@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         
         // Disable scroll of table view
         self.tableView.isScrollEnabled = false
-        self.tableView.frame.size.height = self.tableView.contentSize.height
+//        self.tableView.frame.size.height = self.tableView.contentSize.height
         
         //no need to write following if checked in storyboard
         self.scrollView.bounces = false
@@ -31,6 +31,10 @@ class ViewController: UIViewController {
                 
 //        tableView.frame = CGRect(x: tableView.frame.origin.x, y: tableView.frame.origin.y, width: tableView.frame.size.width, height: tableView.frame.size.height+(5*140));
         tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.frame.size.height = self.tableView.contentSize.height
     }
     
 }
