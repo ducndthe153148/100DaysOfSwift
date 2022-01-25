@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var tableHeightConstraint: NSLayoutConstraint!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,42 +28,43 @@ class ViewController: UIViewController {
         self.tableView.isScrollEnabled = false
 //        self.tableView.frame.size.height = self.tableView.contentSize.height
         
+//        tableView.estimatedRowHeight = 68.0
+//        tableView.rowHeight = UITableView.automaticDimension
+        
         //no need to write following if checked in storyboard
         self.scrollView.bounces = false
         self.tableView.bounces = true
                 
-//        tableView.frame = CGRect(x: tableView.frame.origin.x, y: tableView.frame.origin.y, width: tableView.frame.size.width, height: tableView.frame.size.height+(5*140));
         tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        self.tableView.frame.size.height = self.tableView.contentSize.height
+//    override func viewDidAppear(_ animated: Bool) {
+//        tableHeightConstraint.constant = tableView.contentSize.height
+//        super.viewDidAppear(animated)
+//    }
+    
+    // MARK: - View
+    override func updateViewConstraints() {
+        tableHeightConstraint.constant = tableView.contentSize.height
+        self.tableView.layoutIfNeeded()
+        super.updateViewConstraints()
     }
     
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as! TableViewCell
+        cell.txtInfor.text = "開始日時：2021年12月28日12:33:52 開始日時：2021年12月28日12:33:52 開始日時：2021年12月28日12:33:52"
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 140
-//    }
-    
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if scrollView == self.scrollView {
-//            tableView.isScrollEnabled = (self.scrollView.contentOffset.y >= 200)
-//        }
-//
-//        if scrollView == self.tableView {
-//            self.tableView.isScrollEnabled = (tableView.contentOffset.y > 0)
-//        }
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     
 }

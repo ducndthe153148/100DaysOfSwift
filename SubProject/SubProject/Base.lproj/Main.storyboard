@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--定額 乗り放題プランの申し込み-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SubProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Main" customClass="ViewController" customModule="SubProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,11 +194,12 @@
                             <constraint firstItem="ZZA-N7-LFv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="svn-V5-rbz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="定額 乗り放題プランの申し込み" id="7dT-d8-XTw"/>
+                    <navigationItem key="navigationItem" title="Main" id="7dT-d8-XTw" userLabel="Main"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="headerTable" destination="bM8-w5-6JQ" id="5io-AB-Tnz"/>
                         <outlet property="scrollView" destination="ZZA-N7-LFv" id="uTR-RJ-OAl"/>
+                        <outlet property="tableHeightConstraint" destination="Rzi-Gs-rIY" id="OWJ-67-kMw"/>
                         <outlet property="tableView" destination="UgU-Zq-Df9" id="OaF-jk-Bsq"/>
                     </connections>
                 </viewController>
