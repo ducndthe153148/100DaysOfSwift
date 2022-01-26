@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04DE7F7A27A106A700870E58 /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE7F7927A106A700870E58 /* CustomHeaderView.swift */; };
+		04DE7F7C27A106B300870E58 /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE7F7B27A106B300870E58 /* CustomHeaderView.xib */; };
 		6ACD7969CC2861F274CBA024 /* Pods_SubProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE76BE4104607D54D5EE7C0 /* Pods_SubProject.framework */; };
 		F4FD9280279A513B00740294 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD927F279A513B00740294 /* AppDelegate.swift */; };
 		F4FD9282279A513B00740294 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD9281279A513B00740294 /* SceneDelegate.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04DE7F7927A106A700870E58 /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
+		04DE7F7B27A106B300870E58 /* CustomHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
 		A14B9F619DFBCF37316E895C /* Pods-SubProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubProject.debug.xcconfig"; path = "Target Support Files/Pods-SubProject/Pods-SubProject.debug.xcconfig"; sourceTree = "<group>"; };
 		ABE76BE4104607D54D5EE7C0 /* Pods_SubProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SubProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FD927C279A513B00740294 /* SubProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04DE7F7227A0006100870E58 /* HeaderSection */ = {
+			isa = PBXGroup;
+			children = (
+				04DE7F7927A106A700870E58 /* CustomHeaderView.swift */,
+				04DE7F7B27A106B300870E58 /* CustomHeaderView.xib */,
+			);
+			path = HeaderSection;
+			sourceTree = "<group>";
+		};
 		84D72250CE0408EB923367AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +101,7 @@
 		F4FD927E279A513B00740294 /* SubProject */ = {
 			isa = PBXGroup;
 			children = (
+				04DE7F7227A0006100870E58 /* HeaderSection */,
 				F4FD9299279A969800740294 /* TableViewCell */,
 				F4FD9294279A8B1200740294 /* Header Table */,
 				F4FD9293279A709600740294 /* DropDown */,
@@ -192,6 +206,7 @@
 				F4FD9296279A8BF600740294 /* HeaderTable.xib in Resources */,
 				F4FD9289279A513D00740294 /* Assets.xcassets in Resources */,
 				F4FD9287279A513B00740294 /* Main.storyboard in Resources */,
+				04DE7F7C27A106B300870E58 /* CustomHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4FD929C279A96AF00740294 /* TableViewCell.swift in Sources */,
+				04DE7F7A27A106A700870E58 /* CustomHeaderView.swift in Sources */,
 				F4FD9284279A513B00740294 /* ViewController.swift in Sources */,
 				F4FD9298279A8C0600740294 /* HeaderTable.swift in Sources */,
 				F4FD9280279A513B00740294 /* AppDelegate.swift in Sources */,

@@ -33,8 +33,11 @@ class ViewController: UIViewController {
         //no need to write following if checked in storyboard
 //        self.scrollView.bounces = false
 //        self.tableView.bounces = true
-                
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+
         tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
+        // Register header
+        tableView.register(UINib(nibName: "CustomHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
     }
     
     // MARK: - NEW - Cái này hoạt động ạ, mà nó dài hẳn lên
@@ -81,9 +84,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return 10
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as! TableViewCell
-        cell.txtInfor.text = "Trung Duc dep trai qua di nuihfsdinầ  jadfnfaonfspdfui h hduanòu \(indexPath.row)"
+        cell.txtInfor.text = "30日間 10回 乗車チケット"
         return cell
     }
     
@@ -96,6 +103,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    //Custom Header of Section
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as! CustomHeaderView
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        tableView.estimatedRowHeight = 150
         return UITableView.automaticDimension
     }
 }
