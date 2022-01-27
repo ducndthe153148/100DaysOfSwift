@@ -8,7 +8,10 @@
 import UIKit
 
 class CustomHeaderView: UITableViewHeaderFooterView {
-
+    
+    @IBOutlet weak var lblDown: UILabel!
+    @IBOutlet weak var lblUp: UILabel!
+    @IBOutlet weak var headerView: UIView!
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

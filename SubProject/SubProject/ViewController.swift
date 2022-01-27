@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DropDown
 
 class ViewController: UIViewController {
     
@@ -81,7 +82,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 2
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -109,6 +110,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     //Custom Header of Section
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as! CustomHeaderView
+        if section == 0 {
+            headerView.lblUp.text = "定額乗り放題（自動更新"
+            headerView.lblDown.text = "一定期間、mobiを何度でも乗れるプラン"
+        } else if section == 1 {
+            headerView.lblUp.text = "チケット（自動更新"
+            headerView.lblDown.text = #"ご指定の回数分mobiに乗車できるプラン\#n余った回数は次回更新に持ち越されます"#
+        }
         return headerView
     }
     
