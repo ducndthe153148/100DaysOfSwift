@@ -16,34 +16,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koA-ux-FLc">
-                                <rect key="frame" x="103.5" y="108" width="207" height="114"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="germany"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubj-DQ-Pdu">
-                                <rect key="frame" x="103.5" y="536" width="207" height="114"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="germany"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeH-yy-YEj">
-                                <rect key="frame" x="103.5" y="322" width="207" height="114"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="germany"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="CYc-dW-K0o">
+                                <rect key="frame" x="95" y="145" width="224" height="606"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-Sc-EkW">
+                                        <rect key="frame" x="0.0" y="0.0" width="224" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koA-ux-FLc">
+                                        <rect key="frame" x="0.0" y="104" width="224" height="114"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="germany"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sel-0O-g0R"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeH-yy-YEj">
+                                        <rect key="frame" x="0.0" y="298" width="224" height="114"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="germany"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1PW-dl-rKW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubj-DQ-Pdu">
+                                        <rect key="frame" x="0.0" y="492" width="224" height="114"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="germany"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VXk-ZO-jZC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eeH-yy-YEj" firstAttribute="leading" secondItem="koA-ux-FLc" secondAttribute="leading" id="7uh-Ok-QNH"/>
-                            <constraint firstItem="ubj-DQ-Pdu" firstAttribute="leading" secondItem="eeH-yy-YEj" secondAttribute="leading" id="FPC-Mc-eFd"/>
-                            <constraint firstItem="koA-ux-FLc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="ItM-34-bCg"/>
-                            <constraint firstItem="eeH-yy-YEj" firstAttribute="top" secondItem="koA-ux-FLc" secondAttribute="bottom" constant="100" id="Lz1-rB-cd5"/>
-                            <constraint firstItem="ubj-DQ-Pdu" firstAttribute="top" secondItem="eeH-yy-YEj" secondAttribute="bottom" constant="100" id="V4v-z0-nIF"/>
-                            <constraint firstItem="eeH-yy-YEj" firstAttribute="width" secondItem="koA-ux-FLc" secondAttribute="width" id="g8u-kx-9Xz"/>
-                            <constraint firstItem="koA-ux-FLc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vRN-3N-JHM"/>
-                            <constraint firstItem="koA-ux-FLc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wtj-G9-ftj"/>
-                            <constraint firstItem="ubj-DQ-Pdu" firstAttribute="width" secondItem="eeH-yy-YEj" secondAttribute="width" id="zgF-VI-dVu"/>
+                            <constraint firstItem="CYc-dW-K0o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EAA-Ki-teg"/>
+                            <constraint firstItem="CYc-dW-K0o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yHU-lA-tWF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1aF-7i-QI5"/>
@@ -51,6 +64,7 @@
                         <outlet property="button1" destination="koA-ux-FLc" id="C2r-PP-kZH"/>
                         <outlet property="button2" destination="ubj-DQ-Pdu" id="DkJ-hE-I5y"/>
                         <outlet property="button3" destination="ubj-DQ-Pdu" id="PzD-e4-OBt"/>
+                        <outlet property="scoreNow" destination="ZaN-Sc-EkW" id="qdW-ML-01g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
