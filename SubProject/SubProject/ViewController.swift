@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationController?.navigationBar.backgroundColor = .red
-        headerTable.contentView.backgroundColor = .red
+//        headerTable.contentView.backgroundColor = .red
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -121,7 +121,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        tableView.estimatedRowHeight = 150
+        tableView.estimatedRowHeight = 100
         return UITableView.automaticDimension
     }
 }
