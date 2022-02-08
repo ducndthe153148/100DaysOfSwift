@@ -17,43 +17,37 @@
                 <rect key="frame" x="0.0" y="0.0" width="416" height="92"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qjv-Ps-Jd7">
-                        <rect key="frame" x="24" y="12" width="36" height="68"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="36" id="Tas-qW-TYv"/>
-                        </constraints>
-                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="checkmark.circle.fill" catalog="system" title="" buttonSize="large"/>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="5,000円" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="co7-fe-DEL">
                         <rect key="frame" x="316" y="12" width="76" height="68"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30日間 乗り放題プラン" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUC-fD-tKR">
                         <rect key="frame" x="84" y="12" width="208" height="68"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tick" translatesAutoresizingMaskIntoConstraints="NO" id="CJy-lD-uhC">
+                        <rect key="frame" x="24" y="12" width="36" height="68"/>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="lUC-fD-tKR" firstAttribute="leading" secondItem="Qjv-Ps-Jd7" secondAttribute="trailing" constant="24" id="1We-2e-oz1"/>
                     <constraint firstItem="co7-fe-DEL" firstAttribute="bottom" secondItem="lUC-fD-tKR" secondAttribute="bottom" id="3fH-47-eD1"/>
-                    <constraint firstItem="Qjv-Ps-Jd7" firstAttribute="bottom" secondItem="lUC-fD-tKR" secondAttribute="bottom" id="41B-nv-gKT"/>
-                    <constraint firstItem="Qjv-Ps-Jd7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="EbZ-Ht-4ah"/>
+                    <constraint firstItem="CJy-lD-uhC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CsZ-BM-8Zo"/>
                     <constraint firstAttribute="trailing" secondItem="co7-fe-DEL" secondAttribute="trailing" constant="24" id="Iur-GL-PG6"/>
+                    <constraint firstItem="CJy-lD-uhC" firstAttribute="top" secondItem="lUC-fD-tKR" secondAttribute="top" id="K1j-Qv-kvH"/>
                     <constraint firstItem="co7-fe-DEL" firstAttribute="leading" secondItem="lUC-fD-tKR" secondAttribute="trailing" constant="24" id="M7R-OJ-Sls"/>
                     <constraint firstItem="lUC-fD-tKR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Vub-Az-dit"/>
                     <constraint firstItem="lUC-fD-tKR" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.5" id="YSy-rc-sgH"/>
                     <constraint firstItem="co7-fe-DEL" firstAttribute="top" secondItem="lUC-fD-tKR" secondAttribute="top" id="bXE-0T-eTJ"/>
-                    <constraint firstItem="Qjv-Ps-Jd7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="iqr-8d-PDq"/>
+                    <constraint firstItem="lUC-fD-tKR" firstAttribute="leading" secondItem="CJy-lD-uhC" secondAttribute="trailing" constant="24" id="eOW-fY-TUa"/>
                     <constraint firstItem="co7-fe-DEL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jGu-vX-VGx"/>
+                    <constraint firstItem="CJy-lD-uhC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="mBs-u0-7z0"/>
+                    <constraint firstItem="CJy-lD-uhC" firstAttribute="bottom" secondItem="lUC-fD-tKR" secondAttribute="bottom" id="nvi-0e-aEv"/>
                     <constraint firstItem="lUC-fD-tKR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="qnK-o8-utH"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lUC-fD-tKR" secondAttribute="bottom" constant="12" id="who-3i-TuB"/>
-                    <constraint firstItem="Qjv-Ps-Jd7" firstAttribute="top" secondItem="lUC-fD-tKR" secondAttribute="top" id="yJ1-R3-Owb"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -64,13 +58,12 @@
                 <constraint firstItem="H2p-sc-9uM" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="e3e-Yu-yNL"/>
             </constraints>
             <connections>
-                <outlet property="btnCheckBox" destination="Qjv-Ps-Jd7" id="z15-z5-FbL"/>
                 <outlet property="txtInfor" destination="lUC-fD-tKR" id="J7H-0K-gmW"/>
             </connections>
             <point key="canvasLocation" x="176.81159420289856" y="90.401785714285708"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="Tick" width="36" height="36"/>
     </resources>
 </document>
