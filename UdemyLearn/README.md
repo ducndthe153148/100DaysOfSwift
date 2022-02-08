@@ -14,3 +14,5 @@ Stuck thì note lại và coi là challenge
 - Có thể change size, color của khung
 
     + Sử dụng App icon generator để tạo ảnh 1x, 2x và 3x
+https://appicon.co/#image-sets
+
