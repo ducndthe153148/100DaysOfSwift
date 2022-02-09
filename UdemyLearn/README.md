@@ -41,4 +41,6 @@ https://appicon.co/#image-sets
 
 
 * Section 7: Xylophone
-
+74. Linking multiple buttons to the same IBAction 
+- Change tag của từng button/ Lấy bằng title label
+- lấy tag bằng sender.tag 
