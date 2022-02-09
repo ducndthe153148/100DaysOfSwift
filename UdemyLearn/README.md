@@ -16,3 +16,29 @@ Stuck thì note lại và coi là challenge
     + Sử dụng App icon generator để tạo ảnh 1x, 2x và 3x
 https://appicon.co/#image-sets
 
+36. Design your app: 
+- Khi add thêm image view 
+    + Content mode sẽ quyết định ảnh đó sẽ như nào trong uiimage 
+    + Scale to fill: stretch the image up and down until fills the entire area (sẽ bị kéo dãn ra)
+    + Aspect fill: giữ đúng tỉ lệ ảnh, phóng to cho vừa
+    + Aspect fit: keep đúng ảnh
+    
+- Độ mờ đục của ảnh
+    + Alpha là thành phần mờ đục của ảnh, transparency 
+    
+    
+61. Setting constraint: 
+- Superview là cover the entire screen (cả phần tai thỏ và bên dưới)
+- Safe area thì sẽ không tính phần trên cùng của pin và dưới cùng của home 
+
+63. Working with constraint 
+- Muốn autolayout cho portrait với landscape, nên chia màn hình thành nhiều uiview nhỏ bên trong 
+- equal or larger mean minimum or maximum number of size (relative)
+- 
+
+67. Stack view test 
+- Khi muốn cho view trong stack view khác kích cỡ, ta chỉ cần cho 1 view vào 1 stack view khác rồi chỉnh 
+
+
+* Section 7: Xylophone
+

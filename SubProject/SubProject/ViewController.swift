@@ -10,6 +10,7 @@ import DropDown
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var btnCheckBox: UIImageView!
     @IBOutlet weak var headerTable: HeaderTable!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -31,14 +32,28 @@ class ViewController: UIViewController {
 //        tableView.estimatedRowHeight = 120
 //        tableView.rowHeight = UITableView.automaticDimension
         
-        //no need to write following if checked in storyboard
-//        self.scrollView.bounces = false
-//        self.tableView.bounces = true
+
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        btnCheckBox.isUserInteractionEnabled = true
+        btnCheckBox.addGestureRecognizer(tapGestureRecognizer)
+        
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
 
         tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
         // Register header
         tableView.register(UINib(nibName: "CustomHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+
+        // Your action
+        if btnCheckBox.image == UIImage(named: "Tick") {
+            btnCheckBox.image = UIImage(named: "UnTick")
+        } else if btnCheckBox.image == UIImage(named: "UnTick") {
+            btnCheckBox.image = UIImage(named: "Tick")
+        }
     }
     
     // MARK: - NEW - Cái này hoạt động ạ, mà nó dài hẳn lên

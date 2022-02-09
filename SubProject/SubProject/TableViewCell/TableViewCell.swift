@@ -9,7 +9,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var btnCheckBox: UIButton!
+    @IBOutlet weak var btnCheckBox: UIImageView!
     @IBOutlet weak var txtInfor: UILabel!
     
     override func awakeFromNib() {

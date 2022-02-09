@@ -293,7 +293,7 @@
                                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="88a-Ey-sJk">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="213.5" height="36"/>
                                                                                 <subviews>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tick" translatesAutoresizingMaskIntoConstraints="NO" id="CAG-SV-EJ5">
+                                                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tick" translatesAutoresizingMaskIntoConstraints="NO" id="CAG-SV-EJ5">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="クレジットカード決済" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiK-PZ-fEt">
@@ -368,6 +368,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
+                        <outlet property="btnCheckBox" destination="CAG-SV-EJ5" id="UeH-nG-gzM"/>
                         <outlet property="headerTable" destination="bM8-w5-6JQ" id="5io-AB-Tnz"/>
                         <outlet property="scrollView" destination="ZZA-N7-LFv" id="uTR-RJ-OAl"/>
                         <outlet property="tableHeightConstraint" destination="hll-UK-IdP" id="4tG-s7-XWW"/>
