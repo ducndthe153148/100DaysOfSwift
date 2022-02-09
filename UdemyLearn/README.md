@@ -44,3 +44,14 @@ https://appicon.co/#image-sets
 74. Linking multiple buttons to the same IBAction 
 - Change tag của từng button/ Lấy bằng title label
 - lấy tag bằng sender.tag 
+
+81: Label 
+- Khi muốn chỉnh cho label có thể tự co giãn theo space của view. 
+- Trong Autoshrink, chọn minimum font size để khi có nhiều chữ thì sẽ tự co label
+
+90: Use progress View show time remain
+- 
+
+
+91: Tip
+- Set expectation
