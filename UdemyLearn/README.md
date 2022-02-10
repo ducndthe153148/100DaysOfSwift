@@ -55,6 +55,22 @@ https://appicon.co/#image-sets
 
 91: Tip
 - Set expectation
-97. 4:46
+97. Two dimension array
+let array = [
+[1,2,3]
+[4,5,6]
+[7,8,9]
+]
 
+98. Struct, method and properties
+- Struct: Own data type (Kiểu dữ liệu)
+
+Using scheduled timer to delay time
+
+        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+101. Design pattern 
+- MVC 
+
+105. Immutability
+- Struct - immutable 
 
