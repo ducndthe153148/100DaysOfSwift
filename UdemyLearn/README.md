@@ -74,3 +74,19 @@ Using scheduled timer to delay time
 105. Immutability
 - Struct - immutable 
 
+Animation của uiview 
+
+Giải thích các tham số:
+        UIView.transition(from: backCard, to: imageCard, duration: speed, options: [.showHideTransitionViews, .transitionFlipFromLeft],animations: {
+                self.username.center.x += self.view.bounds.width
+                }
+            , completion: nil)
+        
+    - withDuration: Thời gian thực hiện animation.
+    - delay: Nó sẽ bắt đầu animation sau một khoảng thời gian (ở đây là đợi 0.3s)
+    - options: Tham số tuỳ chọn cho animation, tạm thời bạn sẽ để nó là [] - có nghĩa là “không có tuỳ chọn gì đặc biệt”. Mình sẽ nói về cái này ở một phần khác.
+    - animations: closure thực hiện các biểu thức animation (chỉnh toạ độ,...)
+    - completion: closure thực hiện khi animation vừa kết thúc.
+
+120. Learn UISlider
+- Minimum and maximum to set the range of slide 
