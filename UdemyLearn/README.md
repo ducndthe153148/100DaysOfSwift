@@ -90,3 +90,22 @@ Giải thích các tham số:
 
 120. Learn UISlider
 - Minimum and maximum to set the range of slide 
+
+128. Các loại Optional
+- Force unwrapping (Dung khi chac chan) optional!
+- Check for nil value 
+    if optional! != nil { 
+        optional!
+    }
+- Optinal binding 
+    if let safeOptional = optional { 
+        safeOptional...
+    }
+    
+    
+- Nil Coalescing Operator 
+    optional ?? defaultValue
+    
+- Optional Chaining 
+    optional?.property
+    optional?.method()
