@@ -109,3 +109,5 @@ Giải thích các tham số:
 - Optional Chaining 
     optional?.property
     optional?.method()
+
+145. Something about protocol 
