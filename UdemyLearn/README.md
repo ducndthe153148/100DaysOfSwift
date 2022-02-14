@@ -111,3 +111,26 @@ Giải thích các tham số:
     optional?.method()
 
 145. Something about protocol 
+
+143. SF Symbol
+- Là các symbol cơ bản, sẽ fit với uiimage và hợp lí luôn 
+- Chỉnh tint màu, custom nó,theo any, light, dark trong assert
+- Chỉnh background, trong appearance chọn Any, light, dark
+- Return key là go, capitalization là viết in hoa thì chọn từng chế độ 
+- Dismiss keyboard: 
+    + searchTextField.endEditing(true) 
+    + Ẩn bàn phím đi 
+    
+- Code se run sau khi editting: 
+    + textFieldDidEndEditing
+    
+- install json viewer awesome
+
+149.URL Session và API 
+    - Step 1: Create a URL
+    - Step 2: Create a URLSession
+    - Step 3: Give URLSession Task
+    - Step 4: Start the task 
+    
+
+    
