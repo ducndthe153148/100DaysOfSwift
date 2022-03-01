@@ -131,7 +131,7 @@
                                                             </tableViewCell>
                                                         </prototypes>
                                                     </tableView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgy-vs-kcG">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgy-vs-kcG" userLabel="View Drop down">
                                                         <rect key="frame" x="0.0" y="811" width="414" height="305"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開始日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbG-a5-Ss8">
@@ -163,7 +163,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Mt-21-GQP">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Mt-21-GQP" userLabel="Select view day 2">
                                                                 <rect key="frame" x="24" y="206" width="366" height="60"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcC-vw-qFD">
@@ -180,14 +180,35 @@
                                                                     <constraint firstItem="TcC-vw-qFD" firstAttribute="centerY" secondItem="6Mt-21-GQP" secondAttribute="centerY" id="XAW-W7-ToS"/>
                                                                 </constraints>
                                                             </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfr-Pe-WDb" userLabel="ViewTest">
+                                                                <rect key="frame" x="0.0" y="266" width="414" height="39"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xXb-GF-Adq" userLabel="ViewTest2">
+                                                                        <rect key="frame" x="152" y="0.0" width="110" height="39"/>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="110" id="Ycf-Vd-Snd"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="xXb-GF-Adq" firstAttribute="top" secondItem="lfr-Pe-WDb" secondAttribute="top" id="06u-ZE-Gqk"/>
+                                                                    <constraint firstItem="xXb-GF-Adq" firstAttribute="centerX" secondItem="lfr-Pe-WDb" secondAttribute="centerX" id="FWm-ng-4NJ"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="xXb-GF-Adq" secondAttribute="bottom" id="kgH-si-XC0"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
+                                                            <constraint firstItem="lfr-Pe-WDb" firstAttribute="top" secondItem="6Mt-21-GQP" secondAttribute="bottom" id="0K8-ZX-o5C"/>
                                                             <constraint firstAttribute="trailing" secondItem="CbG-a5-Ss8" secondAttribute="trailing" constant="24" id="5I2-H0-IQS"/>
                                                             <constraint firstAttribute="height" constant="305" id="EK6-Rq-DHH"/>
                                                             <constraint firstAttribute="trailing" secondItem="6Mt-21-GQP" secondAttribute="trailing" constant="24" id="EVI-EY-X1r"/>
                                                             <constraint firstAttribute="trailing" secondItem="TNH-IC-ZGN" secondAttribute="trailing" constant="24" id="ORK-42-mni"/>
+                                                            <constraint firstAttribute="bottom" secondItem="lfr-Pe-WDb" secondAttribute="bottom" id="PMC-dI-Gfd"/>
                                                             <constraint firstItem="DcC-pB-uZL" firstAttribute="top" secondItem="CbG-a5-Ss8" secondAttribute="bottom" constant="12" id="Pdq-QE-b5B"/>
+                                                            <constraint firstItem="lfr-Pe-WDb" firstAttribute="leading" secondItem="wgy-vs-kcG" secondAttribute="leading" id="R9q-B5-hRV"/>
                                                             <constraint firstItem="TNH-IC-ZGN" firstAttribute="leading" secondItem="wgy-vs-kcG" secondAttribute="leading" constant="24" id="YCy-bW-jMD"/>
                                                             <constraint firstItem="CbG-a5-Ss8" firstAttribute="top" secondItem="wgy-vs-kcG" secondAttribute="top" constant="57" id="aIY-vr-HTl"/>
                                                             <constraint firstAttribute="trailing" secondItem="DcC-pB-uZL" secondAttribute="trailing" constant="24" id="cFg-Nh-QTb"/>
@@ -196,6 +217,7 @@
                                                             <constraint firstItem="6Mt-21-GQP" firstAttribute="leading" secondItem="wgy-vs-kcG" secondAttribute="leading" constant="24" id="gHi-a4-g2y"/>
                                                             <constraint firstItem="CbG-a5-Ss8" firstAttribute="leading" secondItem="wgy-vs-kcG" secondAttribute="leading" constant="24" id="ieR-hU-RAZ"/>
                                                             <constraint firstItem="DcC-pB-uZL" firstAttribute="leading" secondItem="wgy-vs-kcG" secondAttribute="leading" constant="24" id="jkO-61-ODG"/>
+                                                            <constraint firstAttribute="trailing" secondItem="lfr-Pe-WDb" secondAttribute="trailing" id="jnB-JZ-NzT"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCQ-UX-hO3">
@@ -411,6 +433,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
